@@ -9,10 +9,11 @@ export const Wrapper = styled.button`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 30px;
+  width: 110px;
+  height: 35px;
   background-color: transparent;
   text-transform: uppercase;
+  letter-spacing: 3px;
   transition: transform 0.1s ease-in-out;
 
   :hover {
