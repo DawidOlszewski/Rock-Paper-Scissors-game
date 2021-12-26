@@ -1,5 +1,5 @@
 const theme = {
-  colors: {
+  color: {
     paper: {
       from: 'hsl(39, 89%, 49%)',
       to: 'hsl(40, 84%, 53%)',
@@ -30,6 +30,13 @@ const theme = {
       score: 'hsl(229, 64%, 46%)',
       header: 'hsl(217, 16%, 45%)',
     },
+  },
+  borderRadius: {
+    m: '10px',
+  },
+  distance: {
+    labelMargin: '27px',
+    labelPadding: '50px',
   },
 };
 
