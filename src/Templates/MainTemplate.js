@@ -17,7 +17,7 @@ const MainTemplate = ({ children }) => {
 
       {children}
 
-      <Rules>12</Rules>
+      <Rules />
     </Container>
   );
 };

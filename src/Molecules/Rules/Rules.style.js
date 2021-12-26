@@ -1,3 +1,4 @@
+import imageRules from 'Images/image-rules.svg';
 import styled from 'styled-components';
 export const Wrapper = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius.m};
@@ -22,5 +23,24 @@ export const Wrapper = styled.button`
 
   @media (min-width: 500px) {
     // position: absolute;
+  }
+`;
+
+export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  div {
+    background: url(${imageRules}) no-repeat center;
+    height: 50%;
+    width: 80%;
   }
 `;
