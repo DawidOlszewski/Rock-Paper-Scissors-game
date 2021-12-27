@@ -1,4 +1,6 @@
 import imageRules from 'Images/image-rules.svg';
+import imageRulesExtended from 'Images/image-rules-bonus.svg';
+
 import exitBtn from 'Images/icon-close.svg';
 import styled from 'styled-components';
 export const Wrapper = styled.button`
@@ -55,7 +57,9 @@ export const Container = styled.div`
   }
 
   div > div {
-    background: url(${imageRules}) no-repeat center;
+    background: url(${({ isExtended }) =>
+        isExtended ? imageRulesExtended : imageRules})
+      no-repeat center;
     background-size: cover;
     height: 50%;
     width: 80%;

@@ -1,10 +1,11 @@
 import { PolishedGameOption } from 'Atoms/GameOption/GameOption';
 import { GamesOptionsContainer } from './ChoseOption.style';
 import { ReactComponent as Triangle } from 'Images/bg-triangle.svg';
+import { ReactComponent as Pentagon } from 'Images/bg-pentagon.svg';
 
-const ChoseOption = ({ setOption }) => {
+const ChoseOption = ({ setOption, isExtended }) => {
   return (
-    <GamesOptionsContainer>
+    <GamesOptionsContainer isExtended={isExtended}>
       <PolishedGameOption
         type="paper"
         onClick={() => {
@@ -23,8 +24,23 @@ const ChoseOption = ({ setOption }) => {
           setOption('rock');
         }}
       />
-
-      <Triangle />
+      {isExtended ? (
+        <>
+          <PolishedGameOption
+            type="spock"
+            onClick={() => {
+              setOption('spock');
+            }}
+          />
+          <PolishedGameOption
+            type="lizard"
+            onClick={() => {
+              setOption('lizard');
+            }}
+          />
+        </>
+      ) : null}
+      {isExtended ? <Pentagon /> : <Triangle />}
     </GamesOptionsContainer>
   );
 };

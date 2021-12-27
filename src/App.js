@@ -7,7 +7,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <BasicGame />
+      <BasicGame isExtended={true} />
     </ThemeProvider>
   );
 }
