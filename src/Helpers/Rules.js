@@ -14,7 +14,7 @@ Rules['rock']['spock'] = 'lose';
 Rules['paper']['rock'] = 'win';
 Rules['paper']['paper'] = 'draw';
 Rules['paper']['scissors'] = 'lose';
-Rules['paper']['lizard'] = 'draw';
+Rules['paper']['lizard'] = 'lose';
 Rules['paper']['spock'] = 'win';
 
 Rules['scissors']['rock'] = 'lose';
