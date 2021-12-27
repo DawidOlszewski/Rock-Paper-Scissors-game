@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const GamesOptionsContainer = styled.div`
   position: relative;
-  height: 10%;
+  height: 30%;
   aspect-ratio: 1/1;
   margin: auto 0;
   button {
@@ -38,11 +38,6 @@ export const GamesOptionsContainer = styled.div`
   & > svg {
     width: 100%;
     height: 100%;
-
-    path: {
-      width: 100%;
-      height: 100%;
-    }
   }
 
   @media (min-width: 400px) {

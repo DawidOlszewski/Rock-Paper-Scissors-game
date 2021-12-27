@@ -7,6 +7,7 @@ import { ReactComponent as Lizard } from 'Images/icon-lizard.svg';
 import theme from 'theme';
 
 const GameOption = ({
+  isExtended,
   icon,
   backgroundColorTo,
   backgroundColorFrom,
@@ -20,16 +21,18 @@ const GameOption = ({
       backgroundColorTo={backgroundColorTo}
       backgroundColorFrom={backgroundColorFrom}
       onClick={onClick}
+      isExtended={isExtended}
     >
       {icon}
     </Wrapper>
   );
 };
 
-export const PolishedGameOption = ({ type, onClick, normal }) => {
+export const PolishedGameOption = ({ type, onClick, normal, isExtended }) => {
   if (type === 'rock')
     return (
       <GameOption
+        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Rock />}
@@ -40,6 +43,7 @@ export const PolishedGameOption = ({ type, onClick, normal }) => {
   if (type === 'paper')
     return (
       <GameOption
+        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Paper />}
@@ -50,6 +54,7 @@ export const PolishedGameOption = ({ type, onClick, normal }) => {
   if (type === 'scissors')
     return (
       <GameOption
+        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Scissors />}
@@ -60,6 +65,7 @@ export const PolishedGameOption = ({ type, onClick, normal }) => {
   if (type === 'spock')
     return (
       <GameOption
+        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Spock />}
@@ -70,6 +76,7 @@ export const PolishedGameOption = ({ type, onClick, normal }) => {
   if (type === 'lizard')
     return (
       <GameOption
+        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Lizard />}

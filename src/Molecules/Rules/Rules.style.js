@@ -7,7 +7,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius.m};
   margin-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
   border: white solid 1px;
   color: white;
   display: flex;
@@ -16,7 +16,7 @@ export const Wrapper = styled.button`
   justify-content: center;
   align-items: center;
   width: 110px;
-  height: 35px;
+  min-height: 35px;
   background-color: transparent;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -55,15 +55,6 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-evenly;
     background-color: white;
-  }
-
-  div > div {
-    background: url(${({ isExtended }) =>
-        isExtended ? imageRulesExtended : imageRules})
-      no-repeat center;
-    background-size: cover;
-    height: 50%;
-    width: 80%;
   }
 
   img {

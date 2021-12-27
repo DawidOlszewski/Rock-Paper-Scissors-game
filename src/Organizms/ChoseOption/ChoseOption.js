@@ -7,18 +7,21 @@ const ChoseOption = ({ setOption, isExtended }) => {
   return (
     <GamesOptionsContainer isExtended={isExtended}>
       <PolishedGameOption
+        isExtended={isExtended}
         type="paper"
         onClick={() => {
           setOption('paper');
         }}
       />
       <PolishedGameOption
+        isExtended={isExtended}
         type="scissors"
         onClick={() => {
           setOption('scissors');
         }}
       />
       <PolishedGameOption
+        isExtended={isExtended}
         type="rock"
         onClick={() => {
           setOption('rock');
@@ -27,12 +30,14 @@ const ChoseOption = ({ setOption, isExtended }) => {
       {isExtended ? (
         <>
           <PolishedGameOption
+            isExtended={isExtended}
             type="spock"
             onClick={() => {
               setOption('spock');
             }}
           />
           <PolishedGameOption
+            isExtended={isExtended}
             type="lizard"
             onClick={() => {
               setOption('lizard');

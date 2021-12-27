@@ -2,10 +2,15 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Wrapper = styled.div`
-  width: 17vh;
-  height: 17vh;
+  width: 60%;
+  height: 60%;
+  ${({ isExtended }) => (isExtended ? 'width: 50%; height: 50%;' : '')}
+  ${({ normal }) =>
+    normal
+      ? 'width: max(min(25vh, 25vw), 130px); height: max(min(25vh, 25vw), 130px);'
+      : ''}
   border-radius: 50%;
-  border: 15px solid transparent;
+  border: min(21px, 2vh) solid transparent;
   background: linear-gradient(white, white) padding-box,
     linear-gradient(
         to bottom,
@@ -28,16 +33,8 @@ export const Wrapper = styled.div`
 
   svg {
     margin-top: 10px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.media.main1}) {
-    width: 20vh;
-    height: 20vh;
-  }
-
-  @media (min-width: ${({ theme }) => theme.media.main2}) {
-    width: 23vh;
-    height: 23vh;
+    width: 40%;
+    height: 40%;
   }
 
   &:hover,
