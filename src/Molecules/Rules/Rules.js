@@ -1,4 +1,4 @@
-import { Wrapper, Container } from 'Molecules/Rules/Rules.style';
+import { Wrapper, Container, RulesImg } from 'Molecules/Rules/Rules.style';
 import ReactDOM from 'react-dom';
 import { useState } from 'react';
 
@@ -12,7 +12,8 @@ const RulesPopUp = ({ setshowRules, isExtended }) => {
     <Container onClick={handleOutsideClick} isExtended={isExtended}>
       <div>
         <h2>Rules</h2>
-        <div />
+        {/* <div /> */}
+        <RulesImg isExtended={isExtended} />
         <button onClick={() => setshowRules(false)}></button>
       </div>
     </Container>

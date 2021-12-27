@@ -3,6 +3,7 @@ import imageRulesExtended from 'Images/image-rules-bonus.svg';
 
 import exitBtn from 'Images/icon-close.svg';
 import styled from 'styled-components';
+
 export const Wrapper = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius.m};
   margin-bottom: 40px;
@@ -65,6 +66,10 @@ export const Container = styled.div`
     width: 80%;
   }
 
+  img {
+    margin-top: 50px;
+  }
+
   button {
     border: none;
     mask: url(${exitBtn});
@@ -91,9 +96,10 @@ export const Container = styled.div`
     & > div {
       position: relative;
       border-radius: 10px;
-      width: 60%;
+      width: min-content;
       max-width: 400px;
-      height: 50%;
+      padding: 30px;
+      height: min-content;
     }
     div > div {
       margin-top: 30px;
@@ -114,3 +120,7 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const RulesImg = ({ isExtended }) => (
+  <img src={isExtended ? imageRulesExtended : imageRules} alt="rules" />
+);

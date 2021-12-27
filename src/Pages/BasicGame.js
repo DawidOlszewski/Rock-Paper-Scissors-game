@@ -33,8 +33,6 @@ const BasicGame = ({ isExtended }) => {
 
   useEffect(() => {
     localStorage[storage] = score;
-    console.log('changed');
-    console.log(localStorage[storage]);
   }, [score]);
 
   return (
