@@ -4,18 +4,26 @@ import Rules from 'Helpers/Rules';
 import options from 'Helpers/Options';
 import { getRandom } from 'Helpers/MathHelpers';
 import useOption from 'Helpers/ChosenOption';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext, useMemo } from 'react';
 import ResultBoard from 'Organizms/ResultBoard/ResultBoard';
+import { GameContext } from 'App';
 
-const BasicGame = ({ isExtended }) => {
-  const getRandOpt = () => getRandom(isExtended ? 5 : 3);
-  let storage = isExtended ? 'roshamboScoreExtended' : 'roshamboScore';
-  // console.log(storage);
-
+const BasicGame = ({}) => {
+  let { isExtended } = useContext(GameContext);
+  const [result, setResult] = useState('draw');
   const [setOption, isChosen, reset, chosenOption] = useOption();
+
+  let getRandOpt = useMemo(() => {
+    return () => getRandom(isExtended ? 5 : 3);
+  }, [isExtended]);
+
+  let storage = useMemo(
+    () => (isExtended ? 'roshamboScoreExtended' : 'roshamboScore'),
+    [isExtended]
+  );
+
   const [randomOption, setRandomOption] = useState(getRandOpt());
   const [score, setScore] = useState(Number(localStorage[storage]) || 0);
-  const [result, setResult] = useState('draw');
 
   useEffect(() => {
     if (isChosen === false) {
@@ -35,8 +43,12 @@ const BasicGame = ({ isExtended }) => {
     localStorage[storage] = score;
   }, [score]);
 
+  useEffect(() => {
+    setScore(Number(localStorage[storage]) || 0);
+  }, [isExtended]);
+
   return (
-    <MainTemplate score={score} isExtended={isExtended}>
+    <MainTemplate score={score}>
       {isChosen ? (
         <ResultBoard
           chosenOption={chosenOption}
@@ -45,7 +57,7 @@ const BasicGame = ({ isExtended }) => {
           reset={reset}
         />
       ) : (
-        <ChoseOption setOption={setOption} isExtended={isExtended} />
+        <ChoseOption setOption={setOption} />
       )}
     </MainTemplate>
   );

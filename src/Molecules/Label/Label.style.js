@@ -14,8 +14,14 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.div`
-  padding: 25px;
+export const Title = styled.button`
+  margin: 25px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+  cursor: pointer;
   h1 {
     font-size: ${({ isExtended }) => (isExtended ? '13px' : ' 23px')};
     line-height: 0.82em;

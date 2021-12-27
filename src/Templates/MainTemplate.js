@@ -11,13 +11,13 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const MainTemplate = ({ children, score, isExtended }) => {
+const MainTemplate = ({ children, score }) => {
   return (
     <Container>
-      <Label score={score} isExtended={isExtended}></Label>
+      <Label score={score}></Label>
 
       {children}
-      <Rules isExtended={isExtended} />
+      <Rules />
     </Container>
   );
 };

@@ -1,9 +1,12 @@
 import { Wrapper, Title, Score } from './Label.style';
+import { useContext } from 'react';
+import { GameContext } from 'App';
 
-const Label = ({ isExtended, score }) => {
+const Label = ({ score }) => {
+  const { isExtended, setExtended } = useContext(GameContext);
   return (
     <Wrapper>
-      <Title isExtended={isExtended}>
+      <Title isExtended={isExtended} onClick={() => setExtended((v) => !v)}>
         <h1>Rock</h1>
         <h1>Paper</h1>
         <h1>Scissors</h1>

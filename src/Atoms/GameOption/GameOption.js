@@ -5,23 +5,25 @@ import { ReactComponent as Scissors } from 'Images/icon-scissors.svg';
 import { ReactComponent as Spock } from 'Images/icon-spock.svg';
 import { ReactComponent as Lizard } from 'Images/icon-lizard.svg';
 import theme from 'theme';
+import { GameContext } from 'App';
+import { useContext } from 'react';
 
 const GameOption = ({
-  isExtended,
   icon,
   backgroundColorTo,
   backgroundColorFrom,
   onClick,
   normal,
 }) => {
+  const { isExtended } = useContext(GameContext);
   return (
     <Wrapper
+      isExtended={isExtended}
       normal={normal}
       as="button"
       backgroundColorTo={backgroundColorTo}
       backgroundColorFrom={backgroundColorFrom}
       onClick={onClick}
-      isExtended={isExtended}
     >
       {icon}
     </Wrapper>
@@ -32,7 +34,6 @@ export const PolishedGameOption = ({ type, onClick, normal, isExtended }) => {
   if (type === 'rock')
     return (
       <GameOption
-        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Rock />}
@@ -43,7 +44,6 @@ export const PolishedGameOption = ({ type, onClick, normal, isExtended }) => {
   if (type === 'paper')
     return (
       <GameOption
-        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Paper />}
@@ -54,7 +54,6 @@ export const PolishedGameOption = ({ type, onClick, normal, isExtended }) => {
   if (type === 'scissors')
     return (
       <GameOption
-        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Scissors />}
@@ -65,7 +64,6 @@ export const PolishedGameOption = ({ type, onClick, normal, isExtended }) => {
   if (type === 'spock')
     return (
       <GameOption
-        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Spock />}
@@ -76,7 +74,6 @@ export const PolishedGameOption = ({ type, onClick, normal, isExtended }) => {
   if (type === 'lizard')
     return (
       <GameOption
-        isExtended={isExtended}
         normal={normal}
         onClick={onClick}
         icon={<Lizard />}

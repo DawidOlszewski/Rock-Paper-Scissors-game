@@ -2,26 +2,26 @@ import { PolishedGameOption } from 'Atoms/GameOption/GameOption';
 import { GamesOptionsContainer } from './ChoseOption.style';
 import { ReactComponent as Triangle } from 'Images/bg-triangle.svg';
 import { ReactComponent as Pentagon } from 'Images/bg-pentagon.svg';
+import { useContext } from 'react';
+import { GameContext } from 'App';
 
-const ChoseOption = ({ setOption, isExtended }) => {
+const ChoseOption = ({ setOption }) => {
+  const { isExtended } = useContext(GameContext);
   return (
     <GamesOptionsContainer isExtended={isExtended}>
       <PolishedGameOption
-        isExtended={isExtended}
         type="paper"
         onClick={() => {
           setOption('paper');
         }}
       />
       <PolishedGameOption
-        isExtended={isExtended}
         type="scissors"
         onClick={() => {
           setOption('scissors');
         }}
       />
       <PolishedGameOption
-        isExtended={isExtended}
         type="rock"
         onClick={() => {
           setOption('rock');
@@ -30,14 +30,12 @@ const ChoseOption = ({ setOption, isExtended }) => {
       {isExtended ? (
         <>
           <PolishedGameOption
-            isExtended={isExtended}
             type="spock"
             onClick={() => {
               setOption('spock');
             }}
           />
           <PolishedGameOption
-            isExtended={isExtended}
             type="lizard"
             onClick={() => {
               setOption('lizard');
