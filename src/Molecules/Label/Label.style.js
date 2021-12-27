@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  margin-top: 30px;
+  margin: 30px 0;
   width: 80%;
+  max-width: 600px;
   height: 100px;
   border-radius: ${({ theme }) => theme.borderRadius.m};
-  border: white solid 1px;
+  border: ${({ theme }) => theme.color.fadeWhite} solid 3px;
   color: white;
   display: flex;
   flex-flow: row nowrap;
@@ -25,8 +26,8 @@ export const Title = styled.div`
 
 const ScoreContainer = styled.div`
   width: 90px;
-  height: 80px;
-  margin-right: 15px;
+  height: calc(100% - 2 * 7px);
+  margin-right: 7px;
   border-radius: ${({ theme }) => theme.borderRadius.m};
   background-color: white;
   padding: 10px;
@@ -36,16 +37,18 @@ const ScoreContainer = styled.div`
   align-items: center;
 
   h2 {
+    color: ${({ theme }) => theme.color.text.score};
     text-transform: uppercase;
-    color: blue;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     font-size: 12px;
   }
 
   p {
-    color: gray;
+    color: ${({ theme }) => theme.color.text.dark};
     font-size: 50px;
-    line-height: 45px;
+    font-weight: bold;
+    line-height: 40px;
+    margin: auto 0;
   }
 `;
 

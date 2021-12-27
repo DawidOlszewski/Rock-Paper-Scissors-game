@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const GamesOptionsContainer = styled.div`
   position: relative;
-  height: 30%;
+  height: 23%;
   aspect-ratio: 1/1;
   margin: auto 0;
   button {
@@ -30,5 +30,12 @@ export const GamesOptionsContainer = styled.div`
       width: 100%;
       height: 100%;
     }
+  }
+
+  @media (min-width: 400px) {
+    height: 30%;
+  }
+  @media (min-width: 500px) {
+    height: 34%;
   }
 `;

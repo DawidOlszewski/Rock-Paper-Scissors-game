@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import { useState } from 'react';
 
 const RulesPopUp = ({ setshowRules }) => {
-  console.log(setshowRules);
+  const handleOutsideClick = (e) => {
+    if (e.target === e.currentTarget) {
+      setshowRules(false);
+    }
+  };
+
   return (
-    <Container>
-      <h2>Rules</h2>
-      <div />
-      <button onClick={() => setshowRules(false)}>X</button>
+    <Container onClick={handleOutsideClick}>
+      <div>
+        <h2>Rules</h2>
+        <div />
+        <button onClick={() => setshowRules(false)}></button>
+      </div>
     </Container>
   );
 };

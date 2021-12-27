@@ -2,6 +2,8 @@ import { Wrapper } from 'Atoms/GameOption/GameOption.style';
 import { ReactComponent as Rock } from 'Images/icon-rock.svg';
 import { ReactComponent as Paper } from 'Images/icon-paper.svg';
 import { ReactComponent as Scissors } from 'Images/icon-scissors.svg';
+import { ReactComponent as Spock } from 'Images/icon-spock.svg';
+import { ReactComponent as Lizard } from 'Images/icon-lizard.svg';
 import theme from 'theme';
 
 const GameOption = ({
@@ -53,6 +55,26 @@ export const PolishedGameOption = ({ type, onClick, normal }) => {
         icon={<Scissors />}
         backgroundColorTo={theme.color.scissors.from}
         backgroundColorFrom={theme.color.scissors.to}
+      />
+    );
+  if (type === 'spock')
+    return (
+      <GameOption
+        normal={normal}
+        onClick={onClick}
+        icon={<Spock />}
+        backgroundColorTo={theme.color.spock.from}
+        backgroundColorFrom={theme.color.spock.to}
+      />
+    );
+  if (type === 'lizard')
+    return (
+      <GameOption
+        normal={normal}
+        onClick={onClick}
+        icon={<Lizard />}
+        backgroundColorTo={theme.color.lizard.from}
+        backgroundColorFrom={theme.color.lizard.to}
       />
     );
 };

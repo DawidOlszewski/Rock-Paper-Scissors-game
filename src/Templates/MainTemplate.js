@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Label from 'Molecules/Label/Label';
 import Rules from 'Molecules/Rules/Rules';
+import React from 'react';
 
 const Container = styled.div`
   display: flex;
@@ -10,10 +11,10 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const MainTemplate = ({ children }) => {
+const MainTemplate = ({ children, score }) => {
   return (
     <Container>
-      <Label></Label>
+      <Label score={score}></Label>
 
       {children}
 

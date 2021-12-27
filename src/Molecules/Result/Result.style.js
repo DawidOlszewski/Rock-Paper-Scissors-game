@@ -6,8 +6,9 @@ export const Container = styled.div`
     text-transform: uppercase;
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: white;
+    font-size: 50px;
   }
 
   button {
@@ -20,8 +21,10 @@ export const Container = styled.div`
     text-transform: uppercase;
     transition: transform 0.1s ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: scale(1.03) translateY(-3px);
+      outline: none;
     }
   }
 `;

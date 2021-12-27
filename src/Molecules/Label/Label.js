@@ -1,6 +1,6 @@
 import { Wrapper, Title, Score } from './Label.style';
 
-const Label = ({ children, isExtended }) => {
+const Label = ({ isExtended, score }) => {
   return (
     <Wrapper>
       <Title isExtended={isExtended}>
@@ -14,7 +14,7 @@ const Label = ({ children, isExtended }) => {
           </>
         ) : null}
       </Title>
-      <Score score="12" />
+      <Score score={score} />
     </Wrapper>
   );
 };

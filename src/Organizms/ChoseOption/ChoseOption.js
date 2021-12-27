@@ -6,12 +6,6 @@ const ChoseOption = ({ setOption }) => {
   return (
     <GamesOptionsContainer>
       <PolishedGameOption
-        type="rock"
-        onClick={() => {
-          setOption('rock');
-        }}
-      />
-      <PolishedGameOption
         type="paper"
         onClick={() => {
           setOption('paper');
@@ -23,15 +17,13 @@ const ChoseOption = ({ setOption }) => {
           setOption('scissors');
         }}
       />
+      <PolishedGameOption
+        type="rock"
+        onClick={() => {
+          setOption('rock');
+        }}
+      />
 
-      {/* <svg width="100" height="100" viewBox="0 0 100 100">
-        <polyline
-          points="0,100 100,100 50,20 0,100"
-          stroke="black"
-          strokeWidth="1"
-          fill="none"
-        />
-      </svg> */}
       <Triangle />
     </GamesOptionsContainer>
   );

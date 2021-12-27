@@ -1,67 +1,50 @@
 import MainTemplate from 'Templates/MainTemplate';
 import ChoseOption from 'Organizms/ChoseOption/ChoseOption';
-import { PolishedGameOption } from 'Atoms/GameOption/GameOption';
 import Rules from 'Helpers/Rules';
 import options from 'Helpers/Options';
 import { getRandom } from 'Helpers/MathHelpers';
-
 import useOption from 'Helpers/ChosenOption';
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import Result from 'Molecules/Result/Result';
-
-const Container = styled.div`
-  margin: 60px 0 40px 0;
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  align-items: center;
-
-  div {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-
-  p {
-    margin-top: 30px;
-    text-transform: uppercase;
-    color: white;
-  }
-`;
+import ResultBoard from 'Organizms/ResultBoard/ResultBoard';
 
 const BasicGame = () => {
   const [setOption, isChosen, reset, chosenOption] = useOption();
   const [randomOption, setRandomOption] = useState(getRandom(3));
+  const [score, setScore] = useState(Number(localStorage.roshamboScore) || 0);
+  const [result, setResult] = useState('draw');
 
   useEffect(() => {
-    console.log('i have changed');
-    setRandomOption(getRandom(3));
+    if (isChosen === false) {
+      setRandomOption(getRandom(3));
+    } else {
+      setResult(Rules[chosenOption][options[randomOption]]);
+    }
   }, [isChosen]);
 
+  useEffect(() => {
+    if (result === 'win') {
+      setScore((s) => s + 1);
+    }
+  }, [result]);
+
+  useEffect(() => {
+    localStorage.roshamboScore = score;
+  }, [score]);
+
   return (
-    <MainTemplate>
+    <MainTemplate score={score}>
       {isChosen ? (
-        <>
-          <Container>
-            <div>
-              <PolishedGameOption normal type={chosenOption} />
-              <p>You Picked</p>
-            </div>
-            <div>
-              <PolishedGameOption normal type={options[randomOption]} />
-              <p>The house picked</p>
-            </div>
-          </Container>
-          <Result
-            result={Rules[chosenOption][options[randomOption]]}
-            onClick={reset}
-          />
-        </>
+        <ResultBoard
+          chosenOption={chosenOption}
+          randomOption={randomOption}
+          result={result}
+          reset={reset}
+        />
       ) : (
         <ChoseOption setOption={setOption} />
       )}
     </MainTemplate>
   );
 };
+
 export default BasicGame;

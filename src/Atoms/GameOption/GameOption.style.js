@@ -4,11 +4,8 @@ import { darken } from 'polished';
 export const Wrapper = styled.div`
   width: 17vh;
   height: 17vh;
-  ${({ normal }) => (normal ? 'transform: translate(0%,0%);' : '')}
   border-radius: 50%;
-
   border: 15px solid transparent;
-
   background: linear-gradient(white, white) padding-box,
     linear-gradient(
         to bottom,
@@ -16,6 +13,7 @@ export const Wrapper = styled.div`
         ${({ backgroundColorTo }) => backgroundColorTo}
       )
       border-box;
+  ${({ normal }) => (normal ? '' : 'cursor:pointer;')};
 
   display: flex;
   justify-content: center;
@@ -32,9 +30,21 @@ export const Wrapper = styled.div`
     margin-top: 10px;
   }
 
-  &:hover {
+  @media (min-width: ${({ theme }) => theme.media.main1}) {
+    width: 20vh;
+    height: 20vh;
+  }
+
+  @media (min-width: ${({ theme }) => theme.media.main2}) {
+    width: 23vh;
+    height: 23vh;
+  }
+
+  &:hover,
+  &:focus {
     transform: scale(1.03) translate(-50%, calc(50% - 3px));
     ${({ normal }) =>
       normal ? 'transform: scale(1.03) translateY(-3px);' : ''}
+    outline:none;
   }
 `;

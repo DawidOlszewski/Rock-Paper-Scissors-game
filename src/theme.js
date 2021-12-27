@@ -1,5 +1,6 @@
 const theme = {
   color: {
+    fadeWhite: 'hsla(1, 100%,100%,0.2)',
     paper: {
       from: 'hsl(39, 89%, 49%)',
       to: 'hsl(40, 84%, 53%)',
@@ -37,6 +38,10 @@ const theme = {
   distance: {
     labelMargin: '27px',
     labelPadding: '50px',
+  },
+  media: {
+    main1: '600px',
+    main2: '700px',
   },
 };
 

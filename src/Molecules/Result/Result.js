@@ -1,9 +1,11 @@
 import { Container } from 'Molecules/Result/Result.style';
 
-const Result = ({ Win, onClick }) => {
+const Result = ({ result, onClick }) => {
   return (
     <Container>
-      <h2>{Win === true ? 'You Win' : 'You Lose'}</h2>
+      <h2>
+        {result === 'win' ? 'You Win' : result === 'lose' ? 'You Lose' : 'Draw'}
+      </h2>
       <button onClick={onClick}>Play Again</button>
     </Container>
   );
