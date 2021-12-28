@@ -8,6 +8,8 @@ You can preview site here: https://dawidolszewski.github.io/Rock-Paper-Scissors-
 
 **You can extend app by clickig the headers title**
 
+You score is stored btw sessions. 
+
 I used here: 
 * Atomic Design
 * React Portal
