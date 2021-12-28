@@ -4,7 +4,9 @@
 
 Fully made in React.
 
-you can preview site here: https://dawidolszewski.github.io/Rock-Paper-Scissors-game/
+You can preview site here: https://dawidolszewski.github.io/Rock-Paper-Scissors-game/
+
+**You can extend app by clickig the headers title**
 
 I used here: 
 * Atomic Design
