@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "/dawidolszewski.github.io/rock-paper-scissors-game/static/js/main.0c789c4d.chunk.js",
-    "main.js.map": "/dawidolszewski.github.io/rock-paper-scissors-game/static/js/main.0c789c4d.chunk.js.map",
-    "runtime-main.js": "/dawidolszewski.github.io/rock-paper-scissors-game/static/js/runtime-main.9f2a19f9.js",
-    "runtime-main.js.map": "/dawidolszewski.github.io/rock-paper-scissors-game/static/js/runtime-main.9f2a19f9.js.map",
-    "static/js/2.0e3951de.chunk.js": "/dawidolszewski.github.io/rock-paper-scissors-game/static/js/2.0e3951de.chunk.js",
-    "static/js/2.0e3951de.chunk.js.map": "/dawidolszewski.github.io/rock-paper-scissors-game/static/js/2.0e3951de.chunk.js.map",
-    "index.html": "/dawidolszewski.github.io/rock-paper-scissors-game/index.html",
-    "static/js/2.0e3951de.chunk.js.LICENSE.txt": "/dawidolszewski.github.io/rock-paper-scissors-game/static/js/2.0e3951de.chunk.js.LICENSE.txt",
-    "static/media/bg-pentagon.2124712a.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/bg-pentagon.2124712a.svg",
-    "static/media/bg-triangle.8c40c6a8.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/bg-triangle.8c40c6a8.svg",
-    "static/media/icon-close.06583fe0.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/icon-close.06583fe0.svg",
-    "static/media/icon-lizard.9253e86a.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/icon-lizard.9253e86a.svg",
-    "static/media/icon-paper.b364d456.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/icon-paper.b364d456.svg",
-    "static/media/icon-rock.b053c3f3.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/icon-rock.b053c3f3.svg",
-    "static/media/icon-scissors.eb24f893.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/icon-scissors.eb24f893.svg",
-    "static/media/icon-spock.8e0a6569.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/icon-spock.8e0a6569.svg",
-    "static/media/image-rules-bonus.513320fb.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/image-rules-bonus.513320fb.svg",
-    "static/media/image-rules.258b753f.svg": "/dawidolszewski.github.io/rock-paper-scissors-game/static/media/image-rules.258b753f.svg"
+    "main.js": "/rock-paper-scissors-game/static/js/main.0c789c4d.chunk.js",
+    "main.js.map": "/rock-paper-scissors-game/static/js/main.0c789c4d.chunk.js.map",
+    "runtime-main.js": "/rock-paper-scissors-game/static/js/runtime-main.b5dd0b03.js",
+    "runtime-main.js.map": "/rock-paper-scissors-game/static/js/runtime-main.b5dd0b03.js.map",
+    "static/js/2.c1a4f84d.chunk.js": "/rock-paper-scissors-game/static/js/2.c1a4f84d.chunk.js",
+    "static/js/2.c1a4f84d.chunk.js.map": "/rock-paper-scissors-game/static/js/2.c1a4f84d.chunk.js.map",
+    "index.html": "/rock-paper-scissors-game/index.html",
+    "static/js/2.c1a4f84d.chunk.js.LICENSE.txt": "/rock-paper-scissors-game/static/js/2.c1a4f84d.chunk.js.LICENSE.txt",
+    "static/media/bg-pentagon.2124712a.svg": "/rock-paper-scissors-game/static/media/bg-pentagon.2124712a.svg",
+    "static/media/bg-triangle.8c40c6a8.svg": "/rock-paper-scissors-game/static/media/bg-triangle.8c40c6a8.svg",
+    "static/media/icon-close.06583fe0.svg": "/rock-paper-scissors-game/static/media/icon-close.06583fe0.svg",
+    "static/media/icon-lizard.9253e86a.svg": "/rock-paper-scissors-game/static/media/icon-lizard.9253e86a.svg",
+    "static/media/icon-paper.b364d456.svg": "/rock-paper-scissors-game/static/media/icon-paper.b364d456.svg",
+    "static/media/icon-rock.b053c3f3.svg": "/rock-paper-scissors-game/static/media/icon-rock.b053c3f3.svg",
+    "static/media/icon-scissors.eb24f893.svg": "/rock-paper-scissors-game/static/media/icon-scissors.eb24f893.svg",
+    "static/media/icon-spock.8e0a6569.svg": "/rock-paper-scissors-game/static/media/icon-spock.8e0a6569.svg",
+    "static/media/image-rules-bonus.513320fb.svg": "/rock-paper-scissors-game/static/media/image-rules-bonus.513320fb.svg",
+    "static/media/image-rules.258b753f.svg": "/rock-paper-scissors-game/static/media/image-rules.258b753f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9f2a19f9.js",
-    "static/js/2.0e3951de.chunk.js",
+    "static/js/runtime-main.b5dd0b03.js",
+    "static/js/2.c1a4f84d.chunk.js",
     "static/js/main.0c789c4d.chunk.js"
   ]
 }
