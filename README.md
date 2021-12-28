@@ -15,5 +15,6 @@ I used here:
 * Custom Hook
 * Css Media queries
 * Lots of absolute positioning
+* localStorage
 
 I think it was pretty funny challnge
